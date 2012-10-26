@@ -1,0 +1,246 @@
+//////////////////////////////////////////////////////////////////////
+// Virginia Gothic Red
+//////////////////////////////////////////////////////////////////////
+
+// Default theme for nathancrank.com
+// copyright 2012 Nathan Crank
+
+@import "compass",
+        "zealot",
+        "sensible",
+        "spec";
+
+
+//////////////////////////////////////////////////////////////////////
+// Variables
+//////////////////////////////////////////////////////////////////////
+
+$themeName: "vagothicred";
+
+// Fonts
+////////
+
+$franklinGothic: "franklin-gothic-urw-1", "franklin-gothic-urw-2", Helvetica, san-serif;
+$franklinGothicCondensed: "franklin-gothic-urw-cond-1", "franklin-gothic-urw-cond-2", Helvetica, san-serif;
+$franklinGothicExtraCompressed: "franklin-gothic-ext-comp-urw-1", "franklin-gothic-ext-comp-urw-2", Helvetica, san-serif;
+$franklinGothicCompressed: "franklin-gothic-urw-comp-1", "franklin-gothic-urw-comp-2", Helvetica, san-serif;
+$ubuntuMono: "ubuntu-mono-1", "ubuntu-mono-2", courier, monospace;
+
+// Colors
+/////////
+$white: #e0ded9;
+$black: #272727;
+$red: #aa3120;
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+// Theme
+//////////////////////////////////////////////////////////////////////
+
+body {
+  background-color: $white;
+  color: $black;
+  font-family: $franklinGothic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $franklinGothicCondensed;
+}
+h1, h2 {
+  color: $red;
+}
+h3, h4, h5, h6 {
+  color: $black;
+}
+article {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    text-align: left;
+    line-height: 1em;
+    margin: 1.25em 0 .1em;
+  }
+}
+
+#title {
+  @include logoSquare(11);
+  @include sens-width(tablet) {
+    @include logoSquare(18);
+  }
+}
+
+article {
+  a, a:link, a:visited {
+    color: $red;
+  }
+  a:hover {
+    color: $red - #222;
+  }
+  a:active {
+    color: $red + #222;
+  }
+}
+
+pre {
+  background-color: $black;
+  color: $white;
+  font: {
+    family: $ubuntuMono;
+    size: .75em;
+  }
+  line-height: 1.2em;
+}
+code {
+  font: {
+    family: $ubuntuMono;
+    weight: 400;
+  }
+}
+
+#signOff {
+  @include logoHorizontal(11);
+}
+
+%footerBorders {
+  border: {
+    style: solid;
+    color: $white - #222;
+  }
+}
+
+footer {
+  background-color: $white - #050505;
+  border-top: .1em solid $white - #222;
+
+  @include box-shadow(rgba($white - #222,.5) 0 0 2em inset);
+
+  h1 {
+    color: $black + #222;
+    span {
+      color: $red;
+    }
+  }
+  h2 {
+    color: $black + #222;
+  }
+  a {
+    text-decoration: none;
+    color: $red;
+  }
+}
+
+#message {
+  @extend %footerBorders;
+}
+
+#skills {
+  @extend %footerBorders;
+}
+
+#github {
+  @extend %footerBorders;
+  background: {
+    image: url("../img/vagothicred/octocat.png");
+  }
+  .svg & {
+    background-image: url("../img/vagothicred/octocat.svg");
+  }
+}
+
+#contact {
+  @extend %footerBorders;
+  .twitter a {
+    background-image: url("../img/vagothicred/twitter.png");
+    &:hover {
+      background-image: url("../img/vagothicred/twitterHover.png");
+    }
+    .svg & {
+      background-image: url("../img/vagothicred/twitter.svg");
+      &:hover {
+        background-image: url("../img/vagothicred/twitterHover.svg");
+      }
+    }
+  }
+  .email a {
+    background-image: url("../img/vagothicred/email.png");
+    &:hover {
+      background-image: url("../img/vagothicred/emailHover.png");
+    }
+    .svg & {
+      background-image: url("../img/vagothicred/email.svg");
+      &:hover {
+        background-image: url("../img/vagothicred/emailHover.svg");
+      }
+    }
+  }
+  .linkedin a {
+    background-image: url("../img/vagothicred/linkedin.png");
+    &:hover {
+      background-image: url("../img/vagothicred/linkedinHover.png");
+    }
+    .svg & {
+      background-image: url("../img/vagothicred/linkedin.svg");
+      &:hover {
+        background-image: url("../img/vagothicred/linkedinHover.svg");
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+#growthCurve {
+  width: 100%;
+  height: 12em;
+  border: .5em solid $white - #111;
+  background: {
+    image: url("../img/welcome/curve.png");
+    repeat: no-repeat;
+    size: cover;
+    position: center bottom;
+  }
+  @include sens-width(mobile-wide) {
+    height: 19em;
+  }
+  @include sens-width(tablet) {
+    height: 16em;
+  }
+  @include sens-width(notebook) {
+    height: 17em;
+  }
+  .svg & {
+    background-image: url("../img/welcome/curve.svg");
+  }
+}
+
+#growthCurveFormula {
+  display: inline-block;
+  vertical-align: top;
+  width: 3em;
+  height: 2em;
+  background: {
+    image: url("../img/welcome/curveformula.png");
+    repeat: no-repeat;
+    size: contain;
+    position: left center;
+  }
+}
+
+#newtonRaphson {
+  width: 100%;
+  height: 4em;
+  background: {
+    image: url("../img/welcome/newtonraphson.png");
+    repeat: no-repeat;
+    size: contain;
+    position: 1em center;
+  }
+}

@@ -1,0 +1,249 @@
+//////////////////////////////////////////////////////////////////////
+// Eunoia
+//////////////////////////////////////////////////////////////////////
+
+// Imports
+//////////
+
+@import "compass",
+        "normalize",
+        "zealot",
+        "sensible",
+        "spec";
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+// Base
+//////////////////////////////////////////////////////////////////////
+
+@include sens-prep;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include sens-variable-sizing(3.65, 47);
+}
+
+h1 {
+  font-size: 3em;
+  margin: 1.2em 0 .1em;
+}
+h2{
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.7em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.4em;
+}
+h6 {
+  font-size: 1.2em;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 42em;
+  padding: 0 1.5em;
+  @include sens-width(notebook) {
+    max-width: 45em;
+    padding: 0;
+  }
+}
+
+#title {
+  @extend %zealot-image-replacement;
+  margin: 2em auto;
+}
+
+article {
+  @extend .content;
+  line-height: 1.6em;
+  @include sens-width(tablet) {
+    max-width: 32em;
+    font-size: 1.25em;
+  }
+  ul {
+    @include sens-width(tablet) {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+#signOff {
+  @extend %zealot-image-replacement;
+  margin: 5em auto;
+}
+
+footer {
+  padding-bottom: 2em;
+}
+
+#message {
+  padding: 2em 0 2.5em;
+  margin-bottom: 2em;
+  border: 0;
+  border-bottom-width: .1em;
+  @include sens-width(tablet) {
+    padding: 2em 0 3.5em;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    @include sens-width(mobile-wide) {
+      font-size: 3em;
+    }
+    @include sens-width(tablet) {
+      font-size: 3.75em;
+    }
+    @include sens-width(notebook) {
+      font-size: 4.75em;
+    }
+    span {
+      display: block;
+      font-size: .64em;
+    }
+  }
+}
+
+#skills {
+  border: 0;
+  margin: 0 auto 3em;
+  width: 90%;
+  padding: 0 1em;
+  @include sens-width(tablet) {
+    @include zealot-float;
+    width: 35%;
+    padding: 4em 2em 4em 1.2em;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin: 0 0 .25em;
+  }
+  ul {
+    @extend %zealot-list-hanging-indent;
+  }
+}
+
+#github {
+  border: 0;
+  border-top-width: .1em;
+  border-bottom-width: .1em;
+  padding: 4.5em 2em 2em;
+  background: {
+    repeat: no-repeat;
+    position: center 1em;
+    size: 4em;
+  }
+  @include sens-width(mobile-wide) {
+    padding: 2em;
+    background: {
+      position: right center;
+      size: 8em;
+    }
+  }
+  @include sens-width(tablet) {
+    @include zealot-float;
+    width: 60%;
+    margin-left: 1%;
+    padding: 4em 0 4em 9em;
+    border: 0;
+    border-left-width: .1em;
+    background: {
+      repeat: no-repeat;
+      position: .75em 3.65em;
+      size: 8em;
+    }
+  }
+
+  h2 {
+    margin: 0;
+  }
+  ul {
+    @extend %zealot-list-hanging-indent;
+  }
+  li {
+    font: {
+      size: 1.2em;
+      weight: bold;
+    }
+    em {
+      display: block;
+      font: {
+        size: .8em;
+        weight: normal;
+      }
+    }
+  }
+}
+
+#contact {
+  // margin-top: 3em;
+  border: 0;
+  padding: 0 2em;
+
+  @include sens-width(tablet) {
+    border: 0;
+    border-top-width: .1em;
+    padding: 2em 0 0 4em;
+  }
+
+  h2 {
+    margin-bottom: .125em;
+    @include sens-width(mobile-wide) {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1em;
+    }
+  }
+
+  ul {
+    @extend %zealot-list-inline;
+    @include sens-width(mobile-wide) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .twitter,
+  .email,
+  .linkedin {
+    a {
+      @extend %zealot-image-replacement;
+      display: inline-block;
+      margin-right: 0;
+      width: 3em;
+      height: 3em;
+      background: {
+        repeat: no-repeat;
+        size: 3em;
+      }
+      @include sens-width(mobile-wide) {
+        margin-right: 2em;
+        width: 5em;
+        height: 5em;
+        background: {
+          repeat: no-repeat;
+          size: 5em;
+        }
+      }
+    }
+  }
+}
+
+
+

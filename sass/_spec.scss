@@ -1,0 +1,24 @@
+//////////////////////////////////////////////////////////////////////
+// Eunoia Basic Specs
+//////////////////////////////////////////////////////////////////////
+
+$logoSquareRatio: 852 / 2048;
+@mixin logoSquare($width) {
+  width: #{$width}em;
+  height: #{$width * $logoSquareRatio}em;
+  background: url("../img/#{$themeName}/logo_square.png") no-repeat;
+  .svg & {
+    background: url("../img/#{$themeName}/logo_square.svg") no-repeat;
+  }
+  background-size: 100% auto;
+}
+$logoHorizontalRatio: 108 / 1018;
+@mixin logoHorizontal($width) {
+  width: #{$width}em;
+  height: #{$width * $logoHorizontalRatio}em;
+  background: url("../img/#{$themeName}/logo_horizontal.png") no-repeat;
+  .svg & {
+    background: url("../img/#{$themeName}/logo_horizontal.svg") no-repeat;
+  }
+  background-size: 100% auto;
+}

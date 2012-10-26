@@ -1,0 +1,1363 @@
+/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+/* line 21, ../sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+/* line 31, ../sass/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 40, ../sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+/* line 49, ../sass/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 63, ../sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Removes default margin.
+ */
+/* line 73, ../sass/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 85, ../sass/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 94, ../sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+/* line 107, ../sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+}
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 115, ../sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 124, ../sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 132, ../sass/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+/* line 140, ../sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+/* line 153, ../sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 162, ../sass/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * Sets consistent quote types.
+ */
+/* line 172, ../sass/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+/* line 180, ../sass/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 189, ../sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 196, ../sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 200, ../sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+/* line 212, ../sass/_normalize.scss */
+img {
+  border: 0;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 220, ../sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+/* line 232, ../sass/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 244, ../sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 255, ../sass/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+/* line 269, ../sass/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 281, ../sass/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 296, ../sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 306, ../sass/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+/* line 316, ../sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 327, ../sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 340, ../sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+/* line 349, ../sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 359, ../sass/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 372, ../sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 223, ../sass/_zealot.scss */
+#title, #signOff, #contact .twitter a,
+#contact .email a,
+#contact .linkedin a {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+/* line 228, ../sass/_zealot.scss */
+#title:before, #signOff:before, #contact .twitter a:before,
+#contact .email a:before,
+#contact .linkedin a:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 125%;
+}
+
+/* line 488, ../sass/_zealot.scss */
+#contact ul {
+  list-style-type: none;
+}
+/* line 490, ../sass/_zealot.scss */
+#contact ul, #contact ul li {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
+
+/* line 510, ../sass/_zealot.scss */
+#skills ul, #github ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 52, ../sass/_sensible.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/* line 24, ../sass/style.scss */
+html,
+body {
+  height: 100%;
+}
+
+@media (min-width: 47em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 0.98872em;
+  }
+}
+@media (min-width: 48em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 0.99568em;
+  }
+}
+@media (min-width: 49em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.00255em;
+  }
+}
+@media (min-width: 50em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.00932em;
+  }
+}
+@media (min-width: 51em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.01601em;
+  }
+}
+@media (min-width: 52em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.02261em;
+  }
+}
+@media (min-width: 53em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.02912em;
+  }
+}
+@media (min-width: 54em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.03555em;
+  }
+}
+@media (min-width: 55em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.0419em;
+  }
+}
+@media (min-width: 56em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.04818em;
+  }
+}
+@media (min-width: 57em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.05438em;
+  }
+}
+@media (min-width: 58em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.06051em;
+  }
+}
+@media (min-width: 59em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.06657em;
+  }
+}
+@media (min-width: 60em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.07257em;
+  }
+}
+@media (min-width: 61em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.07849em;
+  }
+}
+@media (min-width: 62em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.08435em;
+  }
+}
+@media (min-width: 63em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.09015em;
+  }
+}
+@media (min-width: 64em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.09589em;
+  }
+}
+@media (min-width: 65em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.10157em;
+  }
+}
+@media (min-width: 66em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.10719em;
+  }
+}
+@media (min-width: 67em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.11275em;
+  }
+}
+@media (min-width: 68em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.11826em;
+  }
+}
+@media (min-width: 69em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.12372em;
+  }
+}
+@media (min-width: 70em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.12912em;
+  }
+}
+@media (min-width: 71em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.13447em;
+  }
+}
+@media (min-width: 72em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.13977em;
+  }
+}
+@media (min-width: 73em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.14502em;
+  }
+}
+@media (min-width: 74em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.15023em;
+  }
+}
+@media (min-width: 75em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.15539em;
+  }
+}
+@media (min-width: 76em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.1605em;
+  }
+}
+@media (min-width: 77em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.16557em;
+  }
+}
+@media (min-width: 78em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.17059em;
+  }
+}
+@media (min-width: 79em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.17557em;
+  }
+}
+@media (min-width: 80em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.18051em;
+  }
+}
+@media (min-width: 81em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.18541em;
+  }
+}
+@media (min-width: 82em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.19027em;
+  }
+}
+@media (min-width: 83em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.19509em;
+  }
+}
+@media (min-width: 84em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.19987em;
+  }
+}
+@media (min-width: 85em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.20461em;
+  }
+}
+@media (min-width: 86em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.20932em;
+  }
+}
+@media (min-width: 87em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.21399em;
+  }
+}
+@media (min-width: 88em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.21862em;
+  }
+}
+@media (min-width: 89em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.22322em;
+  }
+}
+@media (min-width: 90em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.22778em;
+  }
+}
+@media (min-width: 91em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.23231em;
+  }
+}
+@media (min-width: 92em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.23681em;
+  }
+}
+@media (min-width: 93em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.24128em;
+  }
+}
+@media (min-width: 94em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.24571em;
+  }
+}
+@media (min-width: 95em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.25011em;
+  }
+}
+@media (min-width: 96em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.25448em;
+  }
+}
+@media (min-width: 97em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.25882em;
+  }
+}
+@media (min-width: 98em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.26313em;
+  }
+}
+@media (min-width: 99em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.26742em;
+  }
+}
+@media (min-width: 100em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.27167em;
+  }
+}
+@media (min-width: 101em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.27589em;
+  }
+}
+@media (min-width: 102em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.28009em;
+  }
+}
+@media (min-width: 103em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.28426em;
+  }
+}
+@media (min-width: 104em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.2884em;
+  }
+}
+@media (min-width: 105em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.29252em;
+  }
+}
+@media (min-width: 106em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.29661em;
+  }
+}
+@media (min-width: 107em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.30067em;
+  }
+}
+@media (min-width: 108em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.30471em;
+  }
+}
+@media (min-width: 109em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.30873em;
+  }
+}
+@media (min-width: 110em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.31272em;
+  }
+}
+@media (min-width: 111em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.31668em;
+  }
+}
+@media (min-width: 112em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.32063em;
+  }
+}
+@media (min-width: 113em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.32454em;
+  }
+}
+@media (min-width: 114em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.32844em;
+  }
+}
+@media (min-width: 115em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.33231em;
+  }
+}
+@media (min-width: 116em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.33616em;
+  }
+}
+@media (min-width: 117em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.33999em;
+  }
+}
+@media (min-width: 118em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.3438em;
+  }
+}
+@media (min-width: 119em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.34758em;
+  }
+}
+@media (min-width: 120em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.35135em;
+  }
+}
+@media (min-width: 121em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.35509em;
+  }
+}
+@media (min-width: 122em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.35882em;
+  }
+}
+@media (min-width: 123em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.36252em;
+  }
+}
+@media (min-width: 124em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.3662em;
+  }
+}
+@media (min-width: 125em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.36986em;
+  }
+}
+@media (min-width: 126em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.37351em;
+  }
+}
+@media (min-width: 127em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.37713em;
+  }
+}
+@media (min-width: 128em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.38074em;
+  }
+}
+@media (min-width: 129em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.38432em;
+  }
+}
+@media (min-width: 130em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.38789em;
+  }
+}
+@media (min-width: 131em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.39144em;
+  }
+}
+@media (min-width: 132em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.39497em;
+  }
+}
+@media (min-width: 133em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.39848em;
+  }
+}
+@media (min-width: 134em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.40198em;
+  }
+}
+@media (min-width: 135em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.40546em;
+  }
+}
+@media (min-width: 136em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.40892em;
+  }
+}
+@media (min-width: 137em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.41237em;
+  }
+}
+@media (min-width: 138em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.41579em;
+  }
+}
+@media (min-width: 139em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.41921em;
+  }
+}
+@media (min-width: 140em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.4226em;
+  }
+}
+@media (min-width: 141em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.42598em;
+  }
+}
+@media (min-width: 142em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.42934em;
+  }
+}
+@media (min-width: 143em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.43269em;
+  }
+}
+@media (min-width: 144em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.43602em;
+  }
+}
+@media (min-width: 145em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.43934em;
+  }
+}
+@media (min-width: 146em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.44264em;
+  }
+}
+@media (min-width: 147em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.44593em;
+  }
+}
+@media (min-width: 148em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.4492em;
+  }
+}
+@media (min-width: 149em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.45245em;
+  }
+}
+@media (min-width: 150em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.4557em;
+  }
+}
+@media (min-width: 151em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.45892em;
+  }
+}
+@media (min-width: 152em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.46214em;
+  }
+}
+@media (min-width: 153em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.46534em;
+  }
+}
+@media (min-width: 154em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.46852em;
+  }
+}
+@media (min-width: 155em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.47169em;
+  }
+}
+@media (min-width: 156em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.47485em;
+  }
+}
+@media (min-width: 157em) {
+  /* line 28, ../sass/style.scss */
+  body {
+    font-size: 1.478em;
+  }
+}
+
+/* line 32, ../sass/style.scss */
+h1 {
+  font-size: 3em;
+  margin: 1.2em 0 .1em;
+}
+
+/* line 36, ../sass/style.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 39, ../sass/style.scss */
+h3 {
+  font-size: 1.7em;
+}
+
+/* line 42, ../sass/style.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 45, ../sass/style.scss */
+h5 {
+  font-size: 1.4em;
+}
+
+/* line 48, ../sass/style.scss */
+h6 {
+  font-size: 1.2em;
+}
+
+/* line 52, ../sass/style.scss */
+.content, article {
+  margin: 0 auto;
+  max-width: 42em;
+  padding: 0 1.5em;
+}
+@media (min-width: 67em) {
+  /* line 52, ../sass/style.scss */
+  .content, article {
+    max-width: 45em;
+    padding: 0;
+  }
+}
+
+/* line 62, ../sass/style.scss */
+#title {
+  margin: 2em auto;
+}
+
+/* line 67, ../sass/style.scss */
+article {
+  line-height: 1.6em;
+}
+@media (min-width: 47em) {
+  /* line 67, ../sass/style.scss */
+  article {
+    max-width: 32em;
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 47em) {
+  /* line 74, ../sass/style.scss */
+  article ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* line 82, ../sass/style.scss */
+#signOff {
+  margin: 5em auto;
+}
+
+/* line 87, ../sass/style.scss */
+footer {
+  padding-bottom: 2em;
+}
+
+/* line 91, ../sass/style.scss */
+#message {
+  padding: 2em 0 2.5em;
+  margin-bottom: 2em;
+  border: 0;
+  border-bottom-width: .1em;
+}
+@media (min-width: 47em) {
+  /* line 91, ../sass/style.scss */
+  #message {
+    padding: 2em 0 3.5em;
+    margin-bottom: 0;
+  }
+}
+/* line 101, ../sass/style.scss */
+#message h1 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 2em;
+}
+@media (min-width: 33em) {
+  /* line 101, ../sass/style.scss */
+  #message h1 {
+    font-size: 3em;
+  }
+}
+@media (min-width: 47em) {
+  /* line 101, ../sass/style.scss */
+  #message h1 {
+    font-size: 3.75em;
+  }
+}
+@media (min-width: 67em) {
+  /* line 101, ../sass/style.scss */
+  #message h1 {
+    font-size: 4.75em;
+  }
+}
+/* line 115, ../sass/style.scss */
+#message h1 span {
+  display: block;
+  font-size: .64em;
+}
+
+/* line 122, ../sass/style.scss */
+#skills {
+  border: 0;
+  margin: 0 auto 3em;
+  width: 90%;
+  padding: 0 1em;
+}
+@media (min-width: 47em) {
+  /* line 122, ../sass/style.scss */
+  #skills {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    padding: 4em 2em 4em 1.2em;
+    margin: 0;
+  }
+}
+/* line 134, ../sass/style.scss */
+#skills h2 {
+  font-size: 2em;
+  margin: 0 0 .25em;
+}
+
+/* line 143, ../sass/style.scss */
+#github {
+  border: 0;
+  border-top-width: .1em;
+  border-bottom-width: .1em;
+  padding: 4.5em 2em 2em;
+  background-repeat: no-repeat;
+  background-position: center 1em;
+  background-size: 4em;
+}
+@media (min-width: 33em) {
+  /* line 143, ../sass/style.scss */
+  #github {
+    padding: 2em;
+    background-position: right center;
+    background-size: 8em;
+  }
+}
+@media (min-width: 47em) {
+  /* line 143, ../sass/style.scss */
+  #github {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    margin-left: 1%;
+    padding: 4em 0 4em 9em;
+    border: 0;
+    border-left-width: .1em;
+    background-repeat: no-repeat;
+    background-position: .75em 3.65em;
+    background-size: 8em;
+  }
+}
+/* line 174, ../sass/style.scss */
+#github h2 {
+  margin: 0;
+}
+/* line 180, ../sass/style.scss */
+#github li {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 185, ../sass/style.scss */
+#github li em {
+  display: block;
+  font-size: .8em;
+  font-weight: normal;
+}
+
+/* line 195, ../sass/style.scss */
+#contact {
+  border: 0;
+  padding: 0 2em;
+}
+@media (min-width: 47em) {
+  /* line 195, ../sass/style.scss */
+  #contact {
+    border: 0;
+    border-top-width: .1em;
+    padding: 2em 0 0 4em;
+  }
+}
+/* line 206, ../sass/style.scss */
+#contact h2 {
+  margin-bottom: .125em;
+}
+@media (min-width: 33em) {
+  /* line 206, ../sass/style.scss */
+  #contact h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+}
+@media (min-width: 33em) {
+  /* line 215, ../sass/style.scss */
+  #contact ul {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+/* line 225, ../sass/style.scss */
+#contact .twitter a,
+#contact .email a,
+#contact .linkedin a {
+  display: inline-block;
+  margin-right: 0;
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: 3em;
+}
+@media (min-width: 33em) {
+  /* line 225, ../sass/style.scss */
+  #contact .twitter a,
+  #contact .email a,
+  #contact .linkedin a {
+    margin-right: 2em;
+    width: 5em;
+    height: 5em;
+    background-repeat: no-repeat;
+    background-size: 5em;
+  }
+}

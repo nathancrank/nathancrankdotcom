@@ -1,60 +1,155 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!-- Consider specifying the language of your content by adding the `lang` attribute to <html> -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
 
-    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-         More info: h5bp.com/i/378 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Eunoia</title>
 
-    <title></title>
-    <meta name="description" content="">
+  <link rel="stylesheet" href="stylesheets/style.min.css">
+  <link rel="stylesheet" href="stylesheets/vagothicred.min.css">
 
-    <!-- Mobile viewport optimized: h5bp.com/viewport -->
-    <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-    <link rel="stylesheet" href="stylesheets/screen.css">
-
-    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-    <!-- All JavaScript at the bottom, except this Modernizr build.
-         Modernizr enables HTML5 elements & feature detects for optimal performance.
-         Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/faf8alr.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="js/vendor/modernizr-2.6.1.min.js"></script>
 </head>
 <body>
-    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-         chromium.org/developers/how-tos/chrome-frame-getting-started -->
-    <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
-    <!-- Add your site or application content here -->
 
 
-    <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
+  <header id="title">
+    Nathan Crank
+  </header>
 
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+  <article role="main">
 
-    <!-- scripts concatenated and minified via build script -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <!-- end scripts -->
+    <h1>Hello World</h1>
+    <p>Welcome to the new nathancrank.com. I've spent quite a bit of time crafting it, so I hope you like what you see. It looks simple on the surface, and that was the goal, but there was actually a lot of work that went into making that happen. It is the culmination of several months of work, a few long nights, and learning math I thought was above my head.</p>
 
-    <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-         mathiasbynens.be/notes/async-analytics-snippet -->
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+    <p>I want to spend this first post exploring what I think are some of the more interesting details of what you are staring at. Specifically, I want to talk about a few design goals and some crazy math that went into this.</p>
+
+    <h2>Design Goals</h2>
+    <p>There were several objectives I had for this site when I set out to create it. It had to be:</p>
+    <ul><li>Fast
+    </li><li>Content focused
+    </li><li>Responsive
+    </li><li>Retina ready
+    </li></ul>
+    <h3>Fast</h3>
+    <p>To make it fast I did something absolutely brain-dead easy: I just kept it simple. The entire site loads in at just under 600k. It scores a 96/100 on Google's <a href="https://developers.google.com/speed/pagespeed/insights" rel="Test your site out with Google's Page Speed">Page Speed</a>. You'll notice the page is fairly sparse, with few visual elements. That is for two reasons: I like clean design and it kept it fast. Plus, it really helped accomplish the next goal of keeping it focused on the content.</p>
+
+    <h3>Content Focused</h3>
+    <p>A website should not distract you from why you are there. It should respect your presence, and hopefully, this one does. I plan on using this site to present longer form articles that I am working on. This post will hopefully be the shortest and least interesting post. I will be exploring a number of topics, people and ideas in fairly great detail. The first one coming is about the typographer Morris Fuller Benton, a man responsible for crafting over 200(!) typefaces in the early part of the twentieth century (including this one, Franklin Gothic).</p>
+
+    <h3>Responsive</h3>
+    <p>I've had the fortune of working on a number of responsive designs over the last several months through work. I say this, because it aided greatly in making this site responsive. Responsive design is really easy to talk about conceptually, but very few people talk about the actual nuts and bolts of whats happening. A lot of people rely on grid systems. I think grid systems tend to be overly complex and compromising in how you write some portion of your site. So I wrote my own SASS framework for aiding with responsive design that represents my most current workflow for responsive design. It is called <a href="http://sensible.nathancrank.com" title="">Sensible</a> and I strongly encourage you to check it out. It's ace up the sleeve is the sens-variable-sizing mixin, which causes your site to grown as width increases (more on that later).</p>
+
+    <h3>Retina Ready</h3>
+    <p>This was actually super easy. All of the graphics are SVG where possible, with a PNG fallback for browsers that can't handle it. Any pictures will be posted using the sens-background-image mixing from <a href="http://sensible.nathancrank.com" title="">Sensible</a>, or by simply serving up the largest asset, or by using <a href="http://retinajs.com" title="">retina.js</a> as needed. This is actually a pretty simple problem to solve when you dont have years of content or a legacy CMS to concern yourself with.</p>
+    
+    <p>These certainly arent the most amazing or mind blowing goals. This site is about doing it right, not doing everything under the sun. I wanted a clean environment to share about the things that interest me, and to that extent, I think I have succeeded.</p>
+
+    <h2>Crazy Math</h2>
+    <p>So here's where we get to have some fun. That is, if you find math and programming fun; otherwise, this might be painful. I did more math for this site than I have in the entire time since high school.</p>
+
+    <p>I was having trouble determining how I would accomplish this sites responsiveness on larger screens (20"+). I didn't want to do lots of rearranging, and have to manage complicated media queries. I really like the work of <a href="http://zeldman.com" title="">Jeffery Zeldman</a> and <a href="http://trentwalton.com" title="">Trent Walton</a>. Their sites feature very opinionatedly large text. I think it's great. On a large screen you can sit back and read it comfortably without squinting. I wanted that, except more responsive still.</p>
+
+    <p>So I came up with a rather simple sounding solution. Or so I thought. The site would simply scale up the base font-size over time. Since I am already using only em in my css, this makes it easy to scale the body font-size and change the size of your entire site proportionally. So for example, if you did the following:</p>
+
+    <pre><code>
+      body {
+        font-size: 1em;
+        @media (min-width: 67em) {
+          font-size: 1.5em;
+        }
+      }
+    </code></pre>
+
+    <p>&hellip; then you're site would become 1.5x larger than it was. Easy enough. I'm using SASS for everything these days, so I wrote a mixing with a for loop that would add a media query every x em that had a font-size y times larger. Sounds easy still. And writing the logic for it is easy. Finding the correct growth rate is the real trick. You can't just use y=x where y is the font-size set at the media query at (min-width: x em). It's a start, but you end up with 57em type at 57em wide and 117em at 117em wide! That's rather unruly, I do think everyone can agree. You can tweak with the basic y=mx+b method all you want, but you will end up with either too small of type at the start or too large from the 20" up.</p>
+
+    <p>At this point I had Grapher open and was tweaking the basic y=mx+b variants trying to find something that looked like it had a reasonable growth line. And then it hit me that a growth curve would be a more desirable result, with the size increases tapering off as the screen gets larger. I remembered the interesting curve that a cube root results in and thought it could work. I finally settled on <span id="growthCurveFormula"></span>.</p>
+
+    <div id="growthCurve"></div>
+
+    <p>I think this results in a nice curve. You could tweak the denominator a bit to achieve different results, but probably not outside of the 3-5 range. (<strong>Update:</strong> I actually tweaked it to 3.5 already)</p>
+
+    <p>So now we have an equation. I figured <a href="http://sass-lang.org/" title="">SASS</a> would make this a breeze, since it brings real programming logic and features to CSS. It has all sorts of useful math functions built in such as abs(), but it does not feature nth-roots or exponent math. Which is kind of a problem when you are trying to use them. So I did some googling and found out that Scott Kellum had created a Compass extension called <a href="https://github.com/scottkellum/Sassy-math" title="">Sassy Math</a> that helpfully adds exponent math. Which is great, except that I got ahead of myself and started using this technique in a setting where I'm not always the only one working on a project. It's hard enough to get everyone using SASS on a team, but put the terminal in front of most sane people and they run for the hills. I like the terminal, but I know that's a stop word for most people. So I thought to myself, it just exponents basically, this will be easy to program out.</p>
+
+    <p>So yeah, non-fractional exponents? Super easy to calculate. A fourth grader could codify that. Fractional exponents? They require this:</p>
+
+    <div id="newtonRaphson"></div>
+
+    <p>That is the Newton-Raphson formula. Basically. That is how you calculate fractional exponents. I'll let someone else <a href="http://en.wikipedia.org/wiki/Newton's_method" title="">explain</a> it.</p>
+
+    <p>You back now? You got all that? You ready for the exam? </p>
+
+    <p>Lots of tinkering later, I had it written, in pure SASS as a function. You can check it out in my <a href="http://zealot.nathancrank.com" title="">Zealot</a> framework. Now it's nice and easy to share in a project. The final growth curve mixin can be found in my <a href="http://sensible.nathancrank.com" title="">Sensible</a> framework, and yes, it requires Zealot to operate. It starts right after tablet sizes, since anything earlier doesn't really need to be scaled if you start your design as mobile first, but that (along with whatever) is adjustable.</p>
+
+    <p>All in all, I think the effect works really nicely. It keeps text at the right size, regardless the device, and automatically scales the rest of your site's design proportionally. At 1&ndash;56em the font-size is 1em, at 57 it is 1.02627em. Going out wider still at 87em the font-size is 1.18161em. At the top end of 157em wide (think 27" iMac) the font-size is set at 1.43858em. Pretty spiffy if you ask me. (<strong>Update:</strong> I changed the scaling factor as mentioned above, and I also dropped the starting point down to 47em. If you want to see the updated values, check out the stylesheet. You can access the unminified version <a href="http://dl.dropbox.com/u/2485310/nathancrankdotcom/stylesheets/style.min.css" rel="View the compiled results of the updated arguments.">here</a>.)</p>
+
+    <h2>Don't worry, it's over.</h2>
+    <p>Now that I've rambled on here for 1300 words, I think it's time to wrap up. I hope you like what you see so far, and definitely stay tuned, because it's only going to get better from here.</p>
+
+  </article>
+
+  <div id="signOff">
+    &mdash;  Nathan Crank
+  </div>
+
+  <footer>
+    <div class="content">
+
+      <div id="message">
+        <h1>I design and develop<span>clean, beautiful front-end designs.</span></h1>
+      </div>
+
+      <div id="skills">
+        <h2>I'm good at:</h2>
+        <ul>
+          <li>HTML
+          <li>CSS &amp; <a href="http://sass.nathancrank.com" rel="I love this one so much I have a presentation on it.">SASS</a>
+          <li>JavaScript
+          <li>Typography
+          <li><a href="http://sensible.nathancrank.com" rel="I do this so much I wrote a framework.">Responsive Design</a>
+          <li>Process
+        </ul>
+      </div>
+
+      <div id="github">
+        <h2>I'm on <a href="http://github.nathancrank.com">GitHub</a>.</h2>
+        <p>I've shared several frameworks on <a href="http://github.nathancrank.com">GitHub</a>.</p>
+        <ul>
+          <li><a href="http://zealot.nathancrank.com" rel="Checkout Zealot - A random SASS framework">Zealot</a>
+            <em>A random SASS framework.</em>
+          <li><a href="http://sensible.nathancrank.com" rel="Checkout Sensible - A mobile-first responsive design SASS framework">Sensible</a>
+            <em>A mobile-first responsive design SASS framework.</em>
+        </ul>
+      </div>
+
+      <div id="contact">
+        <h2>Get in touch:</h2>
+        <ul>
+          <li class="twitter"><a href="http://twitter.nathancrank.com" rel="Check out my Twitter">Twitter</a>
+          <li class="email"><a href="mailto:hello@nathancrank.com" rel="Email me">Email</a>
+          <li class="linkedin"><a href="http://linkedin.nathancrank.com" rel="Check out my LinkedIn">LinkedIn</a>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+  
+  <script>
+      var _gaq=[['_setAccount','UA-27479410-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 </body>
 </html>

@@ -1,0 +1,239 @@
+/* line 42, ../sass/vagothicred.scss */
+body {
+  background-color: #e0ded9;
+  color: #272727;
+  font-family: "franklin-gothic-urw-1", "franklin-gothic-urw-2", Helvetica, san-serif;
+}
+
+/* line 48, ../sass/vagothicred.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "franklin-gothic-urw-cond-1", "franklin-gothic-urw-cond-2", Helvetica, san-serif;
+}
+
+/* line 51, ../sass/vagothicred.scss */
+h1, h2 {
+  color: #aa3120;
+}
+
+/* line 54, ../sass/vagothicred.scss */
+h3, h4, h5, h6 {
+  color: #272727;
+}
+
+/* line 58, ../sass/vagothicred.scss */
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  font-weight: 700;
+  text-align: left;
+  line-height: 1em;
+  margin: 1.25em 0 .1em;
+}
+
+/* line 66, ../sass/vagothicred.scss */
+#title {
+  width: 11em;
+  height: 4.57617em;
+  background: url("../img/vagothicred/logo_square.png") no-repeat;
+  background-size: 100% auto;
+}
+/* line 10, ../sass/_spec.scss */
+.svg #title {
+  background: url("../img/vagothicred/logo_square.svg") no-repeat;
+}
+@media (min-width: 47em) {
+  /* line 66, ../sass/vagothicred.scss */
+  #title {
+    width: 18em;
+    height: 7.48828em;
+    background: url("../img/vagothicred/logo_square.png") no-repeat;
+    background-size: 100% auto;
+  }
+  /* line 10, ../sass/_spec.scss */
+  .svg #title {
+    background: url("../img/vagothicred/logo_square.svg") no-repeat;
+  }
+}
+
+/* line 74, ../sass/vagothicred.scss */
+article a, article a:link, article a:visited {
+  color: #aa3120;
+}
+/* line 77, ../sass/vagothicred.scss */
+article a:hover {
+  color: #880f00;
+}
+/* line 80, ../sass/vagothicred.scss */
+article a:active {
+  color: #cc5342;
+}
+
+/* line 85, ../sass/vagothicred.scss */
+pre {
+  background-color: #272727;
+  color: #e0ded9;
+  font-family: "ubuntu-mono-1", "ubuntu-mono-2", courier, monospace;
+  font-size: .75em;
+  line-height: 1.2em;
+}
+
+/* line 94, ../sass/vagothicred.scss */
+code {
+  font-family: "ubuntu-mono-1", "ubuntu-mono-2", courier, monospace;
+  font-weight: 400;
+}
+
+/* line 101, ../sass/vagothicred.scss */
+#signOff {
+  width: 11em;
+  height: 1.16699em;
+  background: url("../img/vagothicred/logo_horizontal.png") no-repeat;
+  background-size: 100% auto;
+}
+/* line 20, ../sass/_spec.scss */
+.svg #signOff {
+  background: url("../img/vagothicred/logo_horizontal.svg") no-repeat;
+}
+
+/* line 105, ../sass/vagothicred.scss */
+#message, #skills, #github, #contact {
+  border-style: solid;
+  border-color: #bebcb7;
+}
+
+/* line 112, ../sass/vagothicred.scss */
+footer {
+  background-color: #dbd9d4;
+  border-top: 0.1em solid #bebcb7;
+  -webkit-box-shadow: rgba(190, 188, 183, 0.5) 0 0 2em inset;
+  -moz-box-shadow: rgba(190, 188, 183, 0.5) 0 0 2em inset;
+  box-shadow: rgba(190, 188, 183, 0.5) 0 0 2em inset;
+}
+/* line 118, ../sass/vagothicred.scss */
+footer h1 {
+  color: #494949;
+}
+/* line 120, ../sass/vagothicred.scss */
+footer h1 span {
+  color: #aa3120;
+}
+/* line 124, ../sass/vagothicred.scss */
+footer h2 {
+  color: #494949;
+}
+/* line 127, ../sass/vagothicred.scss */
+footer a {
+  text-decoration: none;
+  color: #aa3120;
+}
+
+/* line 141, ../sass/vagothicred.scss */
+#github {
+  background-image: url("../img/vagothicred/octocat.png");
+}
+/* line 146, ../sass/vagothicred.scss */
+.svg #github {
+  background-image: url("../img/vagothicred/octocat.svg");
+}
+
+/* line 153, ../sass/vagothicred.scss */
+#contact .twitter a {
+  background-image: url("../img/vagothicred/twitter.png");
+}
+/* line 155, ../sass/vagothicred.scss */
+#contact .twitter a:hover {
+  background-image: url("../img/vagothicred/twitterHover.png");
+}
+/* line 158, ../sass/vagothicred.scss */
+.svg #contact .twitter a {
+  background-image: url("../img/vagothicred/twitter.svg");
+}
+/* line 160, ../sass/vagothicred.scss */
+.svg #contact .twitter a:hover {
+  background-image: url("../img/vagothicred/twitterHover.svg");
+}
+/* line 165, ../sass/vagothicred.scss */
+#contact .email a {
+  background-image: url("../img/vagothicred/email.png");
+}
+/* line 167, ../sass/vagothicred.scss */
+#contact .email a:hover {
+  background-image: url("../img/vagothicred/emailHover.png");
+}
+/* line 170, ../sass/vagothicred.scss */
+.svg #contact .email a {
+  background-image: url("../img/vagothicred/email.svg");
+}
+/* line 172, ../sass/vagothicred.scss */
+.svg #contact .email a:hover {
+  background-image: url("../img/vagothicred/emailHover.svg");
+}
+/* line 177, ../sass/vagothicred.scss */
+#contact .linkedin a {
+  background-image: url("../img/vagothicred/linkedin.png");
+}
+/* line 179, ../sass/vagothicred.scss */
+#contact .linkedin a:hover {
+  background-image: url("../img/vagothicred/linkedinHover.png");
+}
+/* line 182, ../sass/vagothicred.scss */
+.svg #contact .linkedin a {
+  background-image: url("../img/vagothicred/linkedin.svg");
+}
+/* line 184, ../sass/vagothicred.scss */
+.svg #contact .linkedin a:hover {
+  background-image: url("../img/vagothicred/linkedinHover.svg");
+}
+
+/* line 200, ../sass/vagothicred.scss */
+#growthCurve {
+  width: 100%;
+  height: 12em;
+  border: 0.5em solid #cfcdc8;
+  background-image: url("../img/welcome/curve.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+@media (min-width: 33em) {
+  /* line 200, ../sass/vagothicred.scss */
+  #growthCurve {
+    height: 19em;
+  }
+}
+@media (min-width: 47em) {
+  /* line 200, ../sass/vagothicred.scss */
+  #growthCurve {
+    height: 16em;
+  }
+}
+@media (min-width: 67em) {
+  /* line 200, ../sass/vagothicred.scss */
+  #growthCurve {
+    height: 17em;
+  }
+}
+/* line 219, ../sass/vagothicred.scss */
+.svg #growthCurve {
+  background-image: url("../img/welcome/curve.svg");
+}
+
+/* line 224, ../sass/vagothicred.scss */
+#growthCurveFormula {
+  display: inline-block;
+  vertical-align: top;
+  width: 3em;
+  height: 2em;
+  background-image: url("../img/welcome/curveformula.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+
+/* line 237, ../sass/vagothicred.scss */
+#newtonRaphson {
+  width: 100%;
+  height: 4em;
+  background-image: url("../img/welcome/newtonraphson.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 1em center;
+}

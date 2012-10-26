@@ -1,0 +1,328 @@
+// Sensible v0.2
+// A Mobile-First Responsive Design SCSS framework
+// Nathan Crank
+// http://sensible.nathancrank.com
+
+// sens-variable-sizing requires either:
+// - zealot (http://zealot.nathancrank.com)
+// - compass + sassy math
+
+
+
+//////////////////////////////////////////////////////
+// Box Model
+//////////////////////////////////////////////////////
+
+// breakpoint widths
+$sensWidthMobile: 33em;
+$sensWidthMobileWide: $sensWidthMobile;
+$sensWidthTablet: 47em;
+$sensWidthTabletWide: 57em;
+$sensWidthNotebook: 67em;
+$sensWidthNotebookWide: 77em;
+$sensWidthDesktop: 87em;
+$sensWidthDesktopWide: 97em;
+$sensWidthDesktopXWide: 107em;
+$sensWidthDesktopXXWide: 117em;
+$sensWidthDesktopXXXWide: 127em;
+$sensWidthDesktopXXXXWide: 137em;
+$sensWidthDesktopMammoth: 147em;
+
+// breakpoint heights
+$sensHeightMobile: 28em;
+$sensHeightMobileTall: $sensHeightMobile;
+$sensHeightTablet: 46em;
+$sensHeightTabletTall: 62em;
+$sensHeightNotebook: 80em;
+$sensHeightDesktop: 98em;
+$sensHeightDesktopTall: 116em;
+
+// IE selector
+$sensIESelector: ".oldie";
+
+
+
+
+//////////////////////////////////////////////////////
+// Box Model
+//////////////////////////////////////////////////////
+
+// sens-box-sizing automatically changes all elements to calculator their box model using border-box
+@mixin sens-box-sizing {
+  * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    }
+}
+
+// sens-viewport sets the new viewport property properly for responsive designs
+@mixin sens-viewport {
+  @-o-viewport {
+    width: device-width;
+  }
+  @-ms-viewport {
+    width: device-width;
+  }
+  @viewport {
+    width: device-width;
+  }
+}
+
+
+// One to setup everything
+@mixin sens-prep {
+  @include sens-box-sizing;
+  @include sens-viewport;
+}
+
+
+
+
+//////////////////////////////////////////////////////
+// Queries
+//////////////////////////////////////////////////////
+
+
+// Context
+//////////
+
+@mixin sens-screen {
+  @media screen {
+    @content
+  }
+}
+
+@mixin sens-print {
+  @media print {
+    @content
+  }
+}
+
+
+// Sizes
+///////
+
+@mixin sens-width($size, $oldie: false) {
+  @if $size == "mobile" {
+    @media (max-width: $sensWidthMobile) {
+      @content
+    }
+  }
+  @else if $size == "mobile-wide" {
+    @media (min-width: $sensWidthMobileWide) {
+      @content
+    }
+  }
+  @else if $size == "tablet" {
+    @media (min-width: $sensWidthTablet) {
+      @content
+    }
+  }
+  @else if $size == "tablet-wide" {
+    @media (min-width: $sensWidthTabletWide) {
+      @content
+    }
+  }
+  @else if $size == "notebook" {
+    @media (min-width: $sensWidthNotebook) {
+      @content
+    }
+  }
+  @else if $size == "notebook-wide" {
+    @media (min-width: $sensWidthNotebookWide) {
+      @content
+    }
+  }
+  @else if $size == "desktop" {
+    @media (min-width: $sensWidthDesktop) {
+      @content
+    }
+  }
+  @else if $size == "desktop-wide" {
+    @media (min-width: $sensWidthDesktopXWide) {
+      @content
+    }
+  }
+  @else if $size == "desktop-xwide" {
+    @media (min-width: $sensWidthDesktopXWide) {
+      @content
+    }
+  }
+  @else if $size == "desktop-xxwide" {
+    @media (min-width: $sensWidthDesktopXXWide) {
+      @content
+    }
+  }
+  @else if $size == "desktop-xxxwide" {
+    @media (min-width: $sensWidthDesktopXXXWide) {
+      @content
+    }
+  }
+  @else if $size == "desktop-xxxxwide" {
+    @media (min-width: $sensWidthDesktopXXXXWide) {
+      @content
+    }
+  }
+  @else if $size == "desktop-mammoth" {
+    @media (min-width: $sensWidthDesktopMammoth) {
+      @content
+    }
+  }
+  @else {
+    @warn "You're doing it wrong. Check your sens-min-width call."
+  }
+
+  @if ($oldie) {
+    #{$sensIESelector} & {
+      @content
+    }
+  }
+}
+
+@mixin sens-height($size, $oldie: false) {
+  @if $size == "mobile" {
+    @media (max-height: $sensHeightMobile) {
+      @content
+    }
+  }
+  @else if $size == "mobile-tall" {
+    @media (min-height: $sensHeightMobileTall) {
+      @content
+    }
+  }
+  @else if $size == "tablet" {
+    @media (min-height: $sensHeightTablet) {
+      @content
+    }
+  }
+  @else if $size == "tablet-tall" {
+    @media (min-height: $sensHeightTabletTall) {
+      @content
+    }
+  }
+  @else if $size == "notebook" {
+    @media (min-height: $sensHeightNotebook) {
+      @content
+    }
+  }
+  @else if $size == "desktop" {
+    @media (min-height: $sensHeightDesktop) {
+      @content
+    }
+  }
+  @else if $size == "desktop-tall" {
+    @media (min-height: $sensHeightDesktopTall) {
+      @content
+    }
+  }
+  @else {
+    @warn "You're doing it wrong. Check your sens-min-height call."
+  }
+
+  @if ($oldie) {
+    #{$sensIESelector} & {
+      @content
+    }
+  }
+}
+
+
+// Density
+//////////
+
+@mixin sens-min-density($density) {
+  @media (-webkit-min-device-pixel-ratio: $density), (min-resolution: $density + "dppx") {
+    @content
+  }
+}
+
+@mixin sens-hidpi($density: 1.5) {
+  @include sens-min-density($density) {
+    @content
+  }
+}
+
+@mixin sens-retina($density: 2) {
+  @include sens-min-density($density) {
+    @content
+  }
+}
+
+
+// Orientation
+//////////////
+
+@mixin sens-orient($orientation) {
+  @media (orientation: $orientation) {
+    @content
+  }
+}
+
+@mixin sens-portrait {
+  @include sens-orient(portait) {
+    @content
+  }
+}
+
+@mixin sens-landscape {
+  @include sens-orient(landscape) {
+    @content
+  }
+}
+
+
+
+
+//////////////////////////////////////////////////////
+// Images
+//////////////////////////////////////////////////////
+
+// sens-background-image takes a filename and uses the correct resolution version of it for a css background-image
+// the base (1x) file should not have any extra ending on its name
+// files should end in the following pattern: @1.5x, @2x, @3x, etc... (where "_" is the delimiter)
+// $img takes the images path and name up until the file extention (not including the ".")
+// $ext takes the images extention type, (default: png)
+// $state is used to declare img states (active, hover, etc...)
+// $inc takes a numeric value to increment the dppx at (default: 1)
+// $max takes a numeric value at which to stop (default: 2)
+// $min takes a numeric value at which to start (default: 1)
+// $delim takes the delimiter style used (default "_")
+// $delim2 takes the delimiter style used for the dppx indicator (default "@", matching Apple's style)
+
+@mixin sens-background-image($img: "default", $state: "", $inc: 1, $ext: "png", $max: 2, $min: 1, $delim: "_", $delim2: "@"){
+  @if $state != "" {
+    $state: $delim + $state;
+  }
+  $i: $min;
+  @while $i <= $max {
+    @if $i == 1 {
+      background-image: url($img + $state + "." + $ext);
+    } @else {
+      @include sens-min-density($i) {
+        background-image: url($img + $state + $delim2 + $i + "x" + "." + $ext);
+      };
+    }
+    $i: $i + $inc;
+  }
+}
+
+
+
+
+//////////////////////////////////////////////////////
+// Experimental
+//////////////////////////////////////////////////////
+
+// sens-variable-sizing automatically increases the base font-size in ems as the viewport widens.
+// $divisor changes the growth rate, a higher value divisor results in slower growth.
+// $min and $max set the min and max ems at which to create media queries.
+@mixin sens-variable-sizing($divisor: 4, $min: 57, $max: 157, $inc: 1, $nth: 3) {
+  $i: $min;
+  @while $i <= $max {
+    @media (min-width: #{$i}em) {
+      font-size: #{exponent($i,1,$nth)/$divisor}em;
+    }
+    $i: $i + $inc;
+  }
+}
